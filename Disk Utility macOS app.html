@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>All about Disk utility</title>
+    <link rel = "stylesheet"
+      type = "text/css"
+      href = "style_for_website.css" />
+</head>
+<body bgcolor="blue">
+<h1 style="color: white">DISK UTILITY macOS APPLICATION</h1>
+<br/>
+<br/>
+<br/>
+<a href="Home.html" class="myButton">Go back home</a><br/>
+<h1 style="color: white"> What can Disk Utility do?</h1>
+<img src= "https://help.apple.com/assets/5C072579094622C40134BD65/5C07257A094622C40134BD6C/en_US/4facbfe0a5d634962f5c839303b1ede2.png"/>
+<h4>What Disk Utility is useful for</h4>
+<ul>
+<li>You can check for and fix any errors on any disk using the "First Aid🩺" option.</li>
+<li>You can learn all about   the properties of any disk, learn how the file system operates, and get all the technical details of any disk or volume using the "Infoℹ️" option in Disk utility</li>
+<li>You can erase all the contents of any disk using the "Erase" option in disk utility.
+</li>
+<li>You can replace all of the data on one disk with the contents of another using the "Restore🔄" option in Disk utility.</li>
+<li>You can actuall edit the size of any disk and add new data without erasing or replacing the old with the "Partition🔘" option in disk utility.</li>
+<li>You can eject any disk quickily and easily in disk utility avoiding some errors by clicking "⏏" next to the disk you want to disconnect from your computer.</li>
+<li>You can reinstall macOS easily right from a single app-disk utility, without worrying about bad tools like "bless".</li>
+<li>You can view the size and avaliable space on a disk and see what takes up what amount if space.</li>
+</ul>
+<a href= "https://support.apple.com/guide/disk-utility/welcome/mac" style="color:red">Disk Utility help and user guide from Apple</a>
+<p>To find Disk Utility, open Finder and search "Disk Utility" (without the quotes) and open it.</p>
+<img src= "https://help.apple.com/assets/5C072579094622C40134BD65/5C07257A094622C40134BD6C/en_US/24cf153bcfa5c3858525e4aafcc3009e.png">
+<h1 style="color: white">Using Disk utility</h1>
+<p>To use all of the features Disk utility has to offer, first you need to learn how to operate Disk Utility from your mac. The first step is opening it, which you can do in three different ways:
+<ul>
+<li>Through the Spotlight: Press cmnd+[spacebar] and type "Disk". Now double-click Disk Utility.</li>
+</ul>
+<li>Through Finder: control(^)-click the Finder (Blue/white face) and secect "Find...", type "Disk" make sure you are searching "This Mac" and select the dropdown next to "Any" and select "Application" then select Disk Utility and open it by holdiong "command+o".</li>
+<li>Throught the Launchpad: Open Launchpad from the dock or Spotlight search "Launchpad" (icon looks like a rocket) and select "Other" then select "Disk Utility".</li>
+<br>
+<h4>Working with Disk Utility</h4>
+<p>Now that you have it open, you need to know how to use Disk Utility. Let's say your Time Machine is having errors, not backing up, crashing, or just not mounting. Then you have two options: Select your Time Machine Backup Disk and run First Aid by clicking "First Aid🩺" in the Disk Utility menu and selecting "Run". If there really is deep trouble with your disk, it might take a few hours and might just fail, but there is a big chance it might work! Or: Select your Time Machine Backup Disk and if there is a "Mount" button click it if your Time Machine Backup Disk is not mounting.</p>
+<br/>
+If you just have too large of a disk and you want to free up it's space, you can either be on the safe side and check what is taking up the space or seriously leap before you look and just partition the drive. To be on the safe side and check what takes up what space, just look at the bar under the disk and see what takes up what space. For example, do you really want to delete space used by the system from a system volume? Once you have done that or just decided to leap before you look, click "Partition🔘" in the disk Utility menu. If you just want to go ahead and possibly wreck the disk, click the "Partition" button at the bottom of the box you will see after you click "Partition🔘" button in the disk utility menu and start editing the partitions of the device. When you are done click apply. If you want to just add space and be a lot safer with your data, instead of clicking "Partition" at the bottom of the box you see after clicking "Partition🔘" in the Disk Utility menu, click "Add Volume" and add a new disk with more space to the volume or container.</p>
+<img src= "https://www.macworld.co.uk/cmsdata/features/3619175/apfs_warning_in_disk_utility.png">&nbsp;
+<br/>
+<h1 style="color:white">WHAT YOU SHOLULD AND SHOULD <i>NOT</i> DO IN DISK UTILITY</h1>
+<p>Before you just start using Disk Utility, you should know what is <b>safe</b> to do and what is <b><i>not</i> safe to do</b>:
+<h4>First Aid🩺 on startup volumes</h4>
+<p>If you run First Aid🩺 on a startup volume (whatever disk(s) you use as startup disks when you boot your machine), ALWAYS run it in Recovery OS. To enter Recovery OS, restart your computer and hold command+r (without the +) while your computer is rebooting. You can stop holding command+r (without the +) when you see the Apple Logo🍎 and progress bar. You will see a "macOS Utilities" window when the computer finishes rebooting. Click the "Disk Utility" option and run First Aid🩺 on your startup Disk in Recovery OS Mode.</p><br/><br/><h4>Partition🔘 on startup volumes</h4>
+<p>Low disk space is bad, but you should be extra careful when you mess with the format and partitions of your startup disk. There are thousands of other solutions for low disk space that don't involve re-partitioning your startup volume. That can be dangerous. But if you <i>know what you are doing</i>, just open Disk utility and select your startup volume. Select "Partition🔘" and select the "Partition" button in the box that says "<b>Apple File System Space Sharing</b><br/>APFS volumes share storage space within a container. Adding and deleting APFS volumes is faster and simpler than editing a partition map.
+
+To add a new volume to a container without seeing this message, use the Add APFS Volume command in the Edit menu or the Add/Delete Volume toolbar item.
+
+Do you want to add a volume to the container, or partition the device?". Then you will see a map of all your space on the disk, what takes up what space, the names of all the cataories of information on the disk, and a pie chart you can edit and move around. If you want to free up space, add a partition to the disk that has free space.</p>
+<img src= "https://help.apple.com/assets/5C072579094622C40134BD65/5C07257A094622C40134BD6C/en_US/ae45e25fd06837abc22432abe4e7a3a6.png">
+<h4>Encryption, journaling, and ContainerDisks</h4>
+<h5>What is journaling?</h5>
+<p>
+Journaling is a Mac OS X feature that is extremely helpful in protecting the system against the problems that arises due to power failures, hardware failures and directory corruptions. When the journaling is enabled on Mac, it keeps record entries of the changes to the files present on the disk. These entries are maintained in a special type of data structure called “Journal”. All of this happens automatically on OS X. In an event of an abrupt shutdown of the system due to power outage or another failure, these journal entries make it possible to restore the system to the last known consistent state of working. However, the data that was in the buffer while the system failed, may be lost but the system is reinstated to the working state. Additionally, restarting the system gets faster due to journaling. If the drive is formatted in Mac OS X Extended (Journaled), then by default, journaling is active on the drive. Manually activating and deactivating the journaling feature is discussed later in this blog.
+
+<h6>Importance of journaling on a Mac system</h6>
+
+With every write and read operations, file system directories are updated with the file locations and other data. Before the operating system commits to any action, it makes an entry in the “Journal” and then executes the transaction. Additionally, it also marks the action as completed in the journal once the task has been executed. This way a record is maintained of the current transactions, that happen. However, this process results in write overheads; it is worth it. In an event of a power failure or any other disaster which prevents this update to the file system directories, the operating system will take an unexpected amount of time to start again since the system will have to perform a consistency check that requires it to go through the entire file system block by block. More the data present on the system, more time it takes to reinstate the machine to its working state. With journaling feature enabled, a lot of time spent on consistency check can be saved, as with journaling is done already, the need for consistency check is eliminated. All that operating system has to do is to refer to the “Journal” and get the records of all recent transactions that happened prior to the system failure. This way the system is reinstated to the working state faster. In addition, it just takes a few seconds for the operating system to resume the normal operations.
+
+Additionally, the journaling feature on Mac OS extended filesystem being implemented in an incremental way; it is backward compatible with Mac OS extended filesystem machines not having this feature. This means that you can read, write or access the Journaled Mac OS extended volumes on a machine with Mac OS extended file system that does not have a journaling feature.
+
+<h4>Turning ON/OFF the journaling feature on a Mac</h4>
+
+<h6>Enable journaling</h6>
+
+Turning on the journaling feature is quite simple and can be done from Disk Utility application on a Mac. Here’s how to do it:
+
+    Go to Applications > Disk Utility
+    Select the volume or drive on which journaling is to be enabled. If the volume is formatted with Mac OS Extended (Journaled), journaling is already active.
+    Select the File menu option
+    From the dropdown list, select Enable journaling. This enables the journaling on the selected volume
+
+Alternatively, you can also enable it using the Terminal application. Here’s how to do it:
+
+    Go to Terminal application
+    Enter the command "sudo diskutil enableJournal volume/[TYPE THE NAME OF YOUR DISK HERE]" (without the quotes) and press return
+
+<h6>Disable Journaling</h6>
+
+Journaling on the Mac hard drive is enabled by default. It does incur write overheads as the file system makes an entry in the journal before committing the transaction and later has to mark it as complete in the journal. These write overheads are worth since journaling provides protection against system failures. However, in some cases, journaling may have to be turned off due to reasons such as a media device not supporting HFS+ Journaled or some programming files that works best without journaling to gain more operating speed. In such cases, here’s how to turn off journaling:
+<ul>
+   <li>Go to Terminal application</li>
+    <li>Enter the command "sudo diskutil disableJournal volumes/[TYPE THE NAME OF YOUR DISK HERE]" (without the quotes) and press return</li>
+</ul>
+
+Some older versions of OS X prior to OS X Mountain Lion allows disabling journaling from disk utility itself. Just select the volume and disable journaling from the File menu.</p>
+<br/>
+<h5>What are "ContainerDisks"?</h5>
+<p><b>ContainerDisks</b> are like main folders; they usually <b>contain</b> other disks and their storage. The only disk that can be bigger than your system's main ContainerDisk is a Fusion drive. To learn more bout Fusion drives, go to <u><a style="color:red" href="https://support.apple.com/en-us/HT202574">The full and complete guide to Apple Inc's Fusion Drive</a></u> or <u><a href="https://en.wikipedia.org/wiki/Fusion_Drive" style="color:red">Fusion Drive | Wikipedia</a></u>. ContainerDisks have muliiple partitions, but those partitions are actually your other seperate disks. For example, if your startup volume is "Mac HD," and you have a ContainerDisk, that ContainerDisk might have a partition of it called "Macintosh HD" because even your startup volume or data volume (<a href="https://discussions.apple.com/thread/250768000#:~:text=The%20Mac%20HD%20%2D%20Data%20volume,Catalina%20brings%20to%20the%20table." style="color:red"><u>What is a data volume?</u></a>)can be part of a ContainerDisk. ContainerDisks each have numbers to keep seperate from other ContainerDisks and other normal volumes and disks. The image below shows a ContainerDisk that has seperate volumes as it's partitions:</p><br/><img src="https://discussions.apple.com/content/attachment/2e7233cf-0fe5-479a-affa-a135cbfac9d3"></p>&nbsp;
+<h1 style="color:white">Restore vs. Erase in Disk Utility</h1>
+<h4>Intro</h4><br/><p>The words "Restore" and "Erase" mean tottaly different things, even on computers. Normally, "Restore" means revive, save, fix, or back up to a previous version of something, and "Erase" means destroy, wipe out, wreck, or make something dissapear. And in computers, "Restore" means back up the OS or a file to a pervious better version, fix something, or get back a deleted file, and "Erase" means delete, wipe, lock, or make something unusable. But the Erase✏️ and Restore🔄 functions in Disk Utility macOS mean tottaly different things: Erase✏️ erases one disk and replaces it with any other disk you choose, and Restore🔄  means keep the disk or volume but replace all of the data on that volume, or <b>restore</b> all of the data on that volume from a backup but not the actuall volume. I'll dive more into the differences below:</p><br/><h3>Erase</h3><p>When you click "Erase✏️" in Disk Utility, your'e not actually going to erase the disk; you are just going to <i>replace</i> the disk, or create a new disk in place of the old, and you could even replace one volume with another volume that has other data on it, though if you only want to replace the data and not the actuall volume, your'e better off using Restore, which replaces all of the data on the volume with other data but keeps the actuall volume. This has two advantages: one, it is harder too lose a disk when you are only replacing data and not the actuall disk. And two, you can get back a previous backup of the disk without messing with the real disk, which erase can't do. More on that later. So basically the Erase✏️ function of Disk Utility replaces the voleme, or <b>erases</b> one disk and creates another.</p><br/><h3>Restore</h3>
+<p>Now the <b>Restore🔄</b> function is a little different. As I already told you, it replaces all of the data on the volume but dosen't actually touch the volume itself. And one thing that Restore🔄 can do that Erase✏️ can't is that you can replace the data of a disk with a backup of that disks's data without replacing the real disk. But you can also take the data of one disk and the data of another disk and swap them by using the Restore🔄 function (found by looking at the title bar of Disk Utility and selecting "Restore🔄") on both disks and choosing what disk you want to swap with in both dialogs. Note: you can't get rid of all the data on a disk wit restore, you have to use erase for that. So Restore🔄 is pretty useful when it comes to modifying the contents of your disk!</p><br/><h3>Conclusion</h1>
+<p>In conclusion, the erase function replaces one disk with another or creates a new disk in place of the old, and the restore function replaces all of the data in a disk with other data (such as a backup) but dosen't actually touch the real disk or volume.</p>
+<h1 style="color:white">Security and encryption in Disk Utility</h1><br/><p>And last but <em>deffinetly</em> not least, how do you configure encryption and security in Disk Utility? If you want to encrypt a volume, there are many options. One of them is Disk Utility:
+<h3>How to use Disk Utility in macOS to protect your sensitive data</h3>
+<img src="https://photos5.appleinsider.com/gallery/25870-36042-encrypted-folder-disk-utility-title-xl.jpg">
+<p>Practically everyone has files or folders they keep on their Mac that they don't want anyone else to access. This guide explains how to keep these files secure by turning a folder into a protected disk image, one that keeps the documents encrypted and requiring a password to read.
+
+People are generally OK with the idea of having various important documents stored on their Mac, and are quite happy with existing protection built into macOS, including using FileVault to encrypt drives and even just having a password to access the user account in the first place.
+
+However, users may feel some items are too important to not apply some extra level of security. This can range from needing to secure work-related folders that need to be sent to another user, to adding extra protection to birth certificate and passport scans, to keeping embarrassing childhood photos out of view from other members of the family who may sometimes borrow the same user account.
+
+A solution to this is to use Disk Utility to create a disk image, one that is password protected and encrypted, from a folder.
+Creating the Image
+
+Open up Disk Utility, which can be found in the Applications folder, under Utilities. Alternately, use the search function in Finder to search "This Mac" for Disk Utility.
+
+In the Disk Utility menu, select File, New Image, then Image from Folder..., or use the keyboard shortcut Shift-Command-N. In the following dialog box, select the folder you wish to protect, and click "Open".
+
+A new dialog box will appear with a number of options available for creating the disk image. At the top, you can change the name of the disk image to something more appropriate to its contents instead of using the folder name by default, and where you want it to be initially saved.
+
+Under the Image Format dropdown box, select Read/Write to be able to change files held within the image once it is created. If you don't want any changes made to the files in the folder at all, or new files to be added, select Read-Only.</p>
+<img src="https://photos5.appleinsider.com/gallery/25870-36026-encrypted-image-disk-utility-creating-folder00004-xl.jpg">
+<p>Under Encryption, select either 128-bit or 256-bit AES encryption. As indicated in the dropdown box, selecting 256-bit is more secure but will be slower to access compared to 128-bit, so select this only if required.
+
+Enter your desired password twice.
+
+Once the settings are entered, click Save, then Done once the application has completed the image.
+
+At the location defined in the settings, you will find a new DMG file with the name entered during the process.</p>
+<img src="https://photos5.appleinsider.com/gallery/25870-36032-encrypted-image-disk-utility-creating-folder00010-xl.jpg">
+<h3>Accessing the Image</h3>
+
+<p>Your new secure image is used in a similar way to other images. To access the files within, the image needs to be mounted.
+
+Double click the image to mount it. A dialog box will appear asking for the password, which needs to be filled out followed by clicking OK.</p>
+<img src="https://photos5.appleinsider.com/gallery/25870-36037-encrypted-image-disk-utility-opening-image00001-xl.jpg">
+<p>A tickbox below the password entry textbox offers to save the password to the Keychain. Depending on what's stored, and if anyone else has access to the same Keychain by using the same user account, it is probably not a good idea to tick this box.
+
+Once the right password is entered, the image will mount, and the files will be accessible.</p>
+<img src="https://photos5.appleinsider.com/gallery/25870-36039-encrypted-image-disk-utility-opening-image00003-xl.jpg">
+<p>The folder will not need the password again while the image is mounted, but will require it when the image is unmounted.
+
+To unmount, right-click the mounted image and select Eject. When you want to lock and encrypt your file/folder again when you are done using it, do this or it will remain unlocked and decrypted.</p>
+<img src="https://photos5.appleinsider.com/gallery/25870-36040-encrypted-image-disk-utility-opening-image00004-xl.jpg">
+<h3>Further Notes</h3>
+
+<p>After creating the image, it is tempting to delete the source folder and its contents. Before doing so, it is suggested to make sure the image functions as planned, and if necessary, checking there is a securely-held backup of the files.
+
+The same process can also be used to create other types of disk images, like a read-only image to distribute a set collection of files or an application. To create an image that isn't secured with a password, simply do not select either of the encryption options.</p>
+<h1>Conclusion</h1>
+<p>In conclusion, Disk utility is very useful if you know how to use it. From security to recovery and journaling, and erase, restore, and First Aid, and much much more! To try it go up in this guide until you find the "USING DISK UTILITY" header and follow the steps to open Disk utility, and use what youv'e learned!</p>
+</body>
+</html>

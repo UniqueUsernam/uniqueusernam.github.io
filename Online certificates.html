@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Online certificates</title>
+  <link rel = "stylesheet"
+    type = "text/css"
+    href = "style_for_website.css" />
+    </head>
+      <a href="Home.html" class="myButton">Go back home</a>
+<h1>What is a online certificate?</h1>
+<p>You've heard of online security and privacy. Well, how does all that actually work? And why should you care? Well, most online security has "Online certificates" at their roots. So what is an online certificate? Well, let's give you the basics first and then climb up to the advanced stuff. An online certificate is something that confirms whatever site you are on is the real site, and not a fake. For example: you want to buy some products at Amazon, so you open your web browser and type "www.amazon.com" in the address bar. But you accidentally mistype the address and spell "www.amazon.<i>net</i>", and a hacker has set up a malware site to trick people into thinking they are on www.amazon.com but they really aren't, and steal your personal Credit Card details. But your browser gives you a security alert, saving your personal information. But how did your browser know to give you that security alert? The answer lies in online certificates. But an online certificate does more than just block fake domains; online certificates also explain https:// connections, secure connections to domains, secure DNS (Domain Name System-see <a href="What is DNS.html">this link</a> for more information on DNS) lookups, online SSL, and encrypted connections.</p>
+<br/>
+<h1>Interpreting an online certificate</h1>
+<p>When you go to a website like www.amazon.com, online certificates work in the background. For example, if you type www.amazon.com into the adress bar, the browser acts like this: "Oh, the human wants to see 'www.amazon.com'. I'll just make sure that 'www.amazon.com' is secure by peeking at it's online certificate... Oh! 'www.amazon.com's' online certificate is <i>definitely</i> valid (see the "Certificate validity" section of this page for more infomation)! Sending human to 'www.amazon.com' with <i>no</i> security alert!" On the other hand, if you type "www.amazon.net" in the adress bar of your browser, your browser will think "Oh, human wants to go to 'www.amazon.net'. Just going to check the certificate... OH NO! This certificate is deffinatley <i>not</i> valid, so this isn't the real site and it isn't secure. Better tell human that they are putting their personal informaton at risk by going here via a security alert!" and will display a security alert. So when the browser is asked to connect to a website (when you type a URL), it checks the certificate for security.</p>
+<br/>
+<h1>Reading an online certificate</h1>
+<p>If you want to review a certificate for yourself for extra security (though your browser is probably better at reading online certificates than you are, no offense!), or just see it's exact details (encryption algorithm, key fingerprint, issuer, pourpase, name, and <i>much</i>, <i>much</i> more), you'll have to view the certificate. In Mozzila Firefox (or just Firefox), click the padlock (like this: <img src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/gallery/images/2019-10-06-15-47-18-7b49e3.png">) icon, info icon (looks like this: <img src="https://www.pngkit.com/png/full/246-2464747_information-icon-information-icon-gray.png" width="20px"/>), padlock with warning (like this: <img src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/gallery/images/2015-10-21-18-54-26-fe01d6.png" width=20px>), or padlock with a red cross over it (like this: <img src="https://user-media-prod-cdn.itsre-sumo.mozilla.net/uploads/gallery/images/2015-10-21-18-58-14-d85fc6.png">), whichever one you have, in the adress bar to the left. Now click the arrow to the right (like this: >) of the "Site information for yourdomain.com" panel that appeared, and click the <span class="Terminal-command">More Information</span> button on the bottom of the "Connection security for yourdomain.com" panel that just appeared. Now click the "Security" tab at the near top of the window that just appeared (if the window isn't automaticaly on the Security tab, which at least for me it always is), and click "View certificate" button next to the "Verified by" text. In Google Chrome, select the lock, info, or warning icon i  the adress bar at the far left, and select the Certificate (Valid) button, or Certificate (Invalid), whichever one you have. Bam, it's that easy. In Safari, click the smaller padlock icon in the adress bar (on mobile devices, such as iPad or iPhone, you can't do this; go to www.digicert.com )</p>
+<img src="Online certificate 1.jpg" width="800px">
+<br/>
+<br/>
+<img src="Online certificate 2.jpg" width="800px">
+<br/>
+<br/>
+<img src="Online certificate 3.jpg" width="800px">
+<h1>What vouches for what?</h1>
+<p>So, we've got it. Online certificates make all kinds of online security posssible. But if anybody can
+<h1>Online certificate levels</h1>
+<p>When you see an online certificate, there are three tabs: the Root Certificate, the Secure Server Certificate, and the website Certificate. Let's discuss each one.</p>
+<h3>The Root Certificate</h3>
+<p>First, let's explain the Root Certificate. A Root Certificate is

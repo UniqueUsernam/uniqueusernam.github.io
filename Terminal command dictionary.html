@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+      <title>Terminal command dictionary</title>
+      <link rel = "stylesheet"
+        type = "text/css"
+        href = "style_for_website.css" />
+</head>
+<body>
+  <h1>Terminal command dictionary</h1>
+  <button type="button" class="collapsible"><b>sudo</b></button>
+  <div class="content">
+  <p>sudo is not a command itself; rather a prefix for other commands, that adds one additional feature: any commnds in Terminal prefixed with sudo will run as if the root user, the highest level of power on a Mac, was executing it; it will be treated as a command from root user. So let's break this complicated command down: if you have a directory (or folder) called "Top-secret-stuff" located in "private", and you lock it, and when you try to get back in you can't, your first move is the Terminal. You run ls /private/top-secret-stuff, but it says permission denied. You add sudo to the beginning, enter your password at the prompt (the Terminal won't show what you type, just keep going), and guess what? It works! (Example: you have a locked folder called top-secret-stuff in the "private" folder, and you try this to get back in: ls /private/top-secret-stuff. Dosen't work. You try this: sudo ls /private/top-secret-stuff, enter your password, and poof! It works!) And when you add the -u option, that command (prefixed with sudo -u) will not be treated as a command from root user; if after the -u option and a space, you add a users name, it will be treated as a command from <i>that</i> user! Here's an image:<br/><img src="sudo example.png" width="1200"></p>
+  </div>
+  <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+coll[i].addEventListener("click", function() {
+this.classList.toggle("active");
+var content = this.nextElementSibling;
+if (content.style.display === "block") {
+  content.style.display = "none";
+} else {
+  content.style.display = "block";
+}
+});
+}
+</script>
+</body>
+</html>

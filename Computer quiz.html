@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+      <title>Computer quiz</title>
+      <link rel = "stylesheet"
+        type = "text/css"
+        href = "style_for_website.css" />
+      </head>
+<body>
+
+<h1>Computer quiz</h1>
+  <a href="Home.html" class="myButton">Go back home</a><br/>
+  <img src="https://image.freepik.com/free-vector/online-test-questionnaire-survey-form-pc-screen-exam-list-computer-testing-online-quiz-concept_176411-73.jpg"/>
+  <h3>Computer quiz multiple choice questions</h3>
+  <p>Select what you think is the correct answer. Click the red "Get results" button when you are done to see your scores.</p>
+  <div id="quiz"></div>
+   <button id="submit">Get Results</button> 
+  <div id="results"></div>
+  <h1>Computer quiz answer key</h1>
+  <p>To see the answer for a question without actually submitting the quiz, click the red "Reveal answer" butto next to the question you want the answer for.</p>
+<ol>
+  <li>Which command force-completes a action in Terminal? <button onclick="Answer1()">Reveal answer</button><span id="An1"></span></li>
+  <li>How do you cancel an installation when Installer is prompting for administrator authentication?<button onclick="Answer2()">Reveal answer</button><span id="An2"></span></li>
+  <li>How can you lockdown a Terminal window? Don't write the whole process, just the command at the end.<button onclick="Answer3()">Reveal answer</button><span id="An3"></span></li>
+  <li>What is the reccomended encryption for a disk image in Disk Utility? (Hint: It starts with AES and is the lowest form of AES encryption)<button onclick="Answer4()">Reveal answer</button><span id="An4"></span></li>
+  <li>What error message does the Finder display when you double-click on authserver?<button onclick="Answer5()">Reveal answer</button><span id="An5"></span></li>
+  <li>Is the "ApplePushService" folder in Application Support malware?<button onclick="Answer6()">Reveal answer</button><span id="An6"></span></li>
+  <li>What is the main basic pourpase of the cron.deny and at.deny documents, in short?<button onclick="Answer7()">Reveal answer</button><span id="An7"></span></li>
+  <li>What is the opposite document to cron.deny and at.deny but still determines the same permissions and have half the same name?<button onclick="Answer8()">Reveal answer</button><span id="An8"></span></li>
+<li>What are the two locations of at.deny, cron.deny, at.allow, and cron.allow?<button onclick="Answer9()">Reveal answer</button><span id="An9"></span></li>
+<li>What application do at.deny, cron.deny, at.allow, and cron.allow open with, even though Finder does not realise it?<button onclick="Answer10()">Reveal answer</button><span id="An10"></span></li>
+</ol>
+<script>
+function Answer1() {
+  document.getElementById("An1").innerHTML = "Sudo and sudo rm";
+}
+function Answer2() {
+  document.getElementById("An2").innerHTML = "Press cancel on the admin authentication box and normal-quit the Installer. Do not directly quit or force-quit.";
+}
+function Answer3() {
+  document.getElementById("An3").innerHTML = "\"logout\"";
+}
+function Answer4() {
+  document.getElementById("An4").innerHTML = "126-bit AES Encryption (that's a hard one!)";
+}
+
+function Answer5() {
+  document.getElementById("An5").innerHTML = "<b>The folder \"authserver\" can't be opened because you don't have the permission to see it's contents.";
+
+}
+function Answer6() {
+  document.getElementById("An6").innerHTML = "No, it\'s not malware, and it is related to iCloud sync <i>and</i> is a layer of security.";
+
+}
+function Answer7() {
+  document.getElementById("An7").innerHTML = "They determine permissions for a few specific Terminal commands.";
+
+}
+function Answer8() {
+  document.getElementById("An8").innerHTML = "At.allow and cron.allow.";
+
+}
+function Answer9() {
+  document.getElementById("An9").innerHTML = "/private/var/at and /etc/.";
+
+}
+function Answer10() {
+  document.getElementById("An10").innerHTML = "Microsoft Word.";
+
+
+}
+</script>
+<script src="Computer quiz.js"></script>
+</body>
+</html>

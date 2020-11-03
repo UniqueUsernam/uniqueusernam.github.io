@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+      <title>How to hack a locked folder/file in macOS</title>
+      <link rel = "stylesheet"
+        type = "text/css"
+        href = "style_for_website.css" />
+</head>
+<body>
+  <h1>How to hack a locked file or folder in macOS</h1>
+  <ul>
+  <li>Through Terminal: open Terminal and type "sudo open [PUT THE <i>PATH</i> OF THE FILE YOU WANT TO FORCE-OPEN HERE]" and enter your <i>administrator</i> username and password. Terminal won't show what you are typing, just press enter when you typed it. The locked file/folder should open, but if it dosen't it is protected by the <a href="What is SIP.html">SIP (System Integrity Protection)</a>. Try another step if this is the case.</li>
+  <li>Through the permissions pane: this is probably the easiest but not always effective option, and you have to know your way around Finder for this. Click the locked file/folder so it is highlighted, and press command-i to open up the "Get Info" window. At the very bottom of this window you will see the words "Sharing & File Permissions▷" with a "▷" sign at the end. Click on the "▷" symbol to expand the Sharing & File Permissions window, and click the tiny lock icon (🔒), and enter your Administrator name and password. In the dropdown next to "👨🏿‍You", change the permissions from "No acess" or "Read only" to "Read & Write". Then deauthenticate (click the lock icon again🔓) and close the window. (If you saw no "👨🏿‍You" option in that window, change permissions for "Everyone" insted but change permissions back when you are done.) Now open the folder and you should have acess. If you see "The operation can't be completed because you don't have the necessary permission" when you are changing the permissions, make sure that before changing permissions you clicked the lock icon and entered an administrator's name and password. Also, if the lock icon greyed out/was already greyed out after/before you entered an administrator name and password, it means you need to be even higher than an administrator to change permissions on that file. It could be <a href="What is SIP.html">protected by the SIP (System Integrity Protection)</a>. Your best bet there is to follow these same steps in root user, or System Administrator Mode. <a href="How to enable root user in macOS.html">How to enable and use root user on a mac</a>. Or, the file could be locked with the "Locked" checkbox (not the same kind of locked as No Access permissions or permissions errors). In this case look in the "General" pane and uncheck the "Locked" checkbox. If it is greyed out, checked or unchecked, this file is probably <a href="What is SIP.html">SIP-protected</a>. If you still have "<b>The operation can't be completed because you don't have the necessary permission.</b>" errors, try the other methods in this guide.</li>
+  <img src="https://www.fireebok.com/images/resource/osx/permission.png"/>
+  <li>Through file-duplicating and authentication: This is the way that I figured out by myself. No books, websites, or teachers involved. Just drag the file onto your desktop, enter an administrator name and password or administrator Touch ID, abd the folder should be copied. Now delete the original (keeping the copy) and enter an administrator name and password/Touch ID when macOS prompts for authentication. Empty the Trash-<b><i>DO NOT use delete immediatley!</b></i> Now drag the copy you made into the folder the original was in. If it is protected, click Authenticate and enter an administrator name and password/Touch ID. Now double-click the folder you just moved and it should be open. If you run into errors at any time in this process, <a href="How to enable root user in macOS">run in root user</a> to reduce the chance of permissions errors. If the folder is open but empty, check the folder's Get Info panel from what appears to be inside the folder and see if your permission is Read & Write. If not, change the pemissions from the permissions pane with our "With the permissions pane" bulleted item.
+  </ul>
+</body>
+</html>

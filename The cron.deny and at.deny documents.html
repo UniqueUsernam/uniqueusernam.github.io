@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>The cron.deny and at.deny documents</title>
+<link rel = "stylesheet"
+type = "text/css"
+href = "style_for_website.css" />
+</head>
+<body bgcolor="blue">
+  <a href="Home.html" class="myButton">Go back home</a><br/>
+<h1 style="color:white">The cron.deny and at.deny documents in Mac OS X</h1>
+<img src="https://i0.wp.com/osxdaily.com/wp-content/uploads/2011/03/default-crontab-editor.jpg?resize=350%2C200&ssl=1"/>
+<h1 style="color:white">What are these files?</h1>
+<p>You have to explore compuer system folders at least as much as me to discover these files, called "cron.deny" and "at.deny" located at /private/var/at/cron.deny and /private/var/at/at.deny. So if you don't know about these files already, I 100% don't blame you! These are buried system files not made for user use. If you want to check them out, go to /private/var/at/cron.deny and /private/var/at/at.deny. When you try to open them, Finder will say "There is no application set to open the file "cron.deny (or at.deny)." Just click "Choose Application..." and select Microsoft Word. If it is greyed out, change the dropdown at the bottom of the Choose application window from "Recommended applications" to "All applications" and secect Micrsoft Word again. DO NOT CHECK "Always open with". Click Ok once you selected Microsoft Word. Now in Microsoft Word you will see a "Select the encoding that makes your document readable" window. Just click Ok at the bottom of the window and don't change the encoding. You should have opened those files. Cron.deny and at.deny are special permissions files that control the permissions on a few specific actions (like, around 2). More specifically, cron.deny (or cron.allow) controls the permissions for executing certain cron jobs, and
+at.deny (or at.allow) determines who can submit jobs via at or batch commands.
+<h1 style="color:white">What at.deny and at.allow can determine</h1>
+<img src="https://cdn.brianli.com/uploads/2020/04/20200410_AUTOMATOR-SCRIPT-ERROR-MACOS-CATALINA.png" width="409px" hight="409xpx"/>
+<p>The /private/var/at/at.deny and /private/var/at/at.deny files determine which user can submit commands for later execution via at or batch commands.
+
+The format of the files is a list of usernames, one on each line. Whitespace is not permitted.
+
+The superuser may always use the at command.
+
+If the file /private/var/at/at.allow exists, only usernames mentioned in it are allowed to use at.
+
+If /private/var/at/at.allow does not exist, /private/var/at/at.deny is checked/used.
+
+at.deny and at.allow appear in all these directories: /etc/at.deny, /etc/at.allow, /private/var/at/at.deny, and /private/var/at.allow.
+<h1 style="color:white">What cron.deny and cron.allow can determine</h1>
+<img src="https://i.stack.imgur.com/OPhxU.png"/>
+<p>Cron.deny and cron.allow determine the permissions for a few of the special processes called "cron jobs" on your mac. Cron.deny and cron.allow don't control the permissions of all cron jobs, but they do control which users can use a few cron jobs and what users can't.
+</body>
+</html>
