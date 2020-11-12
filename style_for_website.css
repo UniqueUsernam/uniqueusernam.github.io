@@ -55,9 +55,9 @@ body {
   font-family:"Times New Roman";
 border: none;
 border-radius: 8px;}
-span {
+/*span {
   color: white;
-}
+}*/
 
 .collapsible {
   background-color: #777;
@@ -93,13 +93,11 @@ span {
   color: grey;
   font-style: italic;
 }
-.Warning {
-  border-color: #ffff00;
-  border-width: medium;
-  border-style: color:#ffff00;
-  font-style: bold;
-  font-size: 20px;
-  border-length: medium;
+p.Warning {
+  background-color: yellow;
+  border-radius: 2px;
+  padding: 50px 50px 50px 50px;
+  margin: 50px 50px 50px 50px;
 }
 .Not-bold {
   font-style: normal !important;
