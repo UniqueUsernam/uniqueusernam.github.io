@@ -93,3 +93,17 @@ span {
   color: grey;
   font-style: italic;
 }
+.Warning {
+  border-color: #ffff00;
+  border-width: medium;
+  border-style: color:#ffff00;
+  font-style: bold;
+  font-size: 20px;
+  border-length: medium;
+}
+.Not-bold {
+  font-style: normal !important;
+}
+.Bold-substitute {
+  font-style: bold;
+}
