@@ -12,8 +12,12 @@ $('body').terminal({
         this.echo('Hello, ' + what +
                   '. Wellcome to this terminal.');
     }
+		$('body').terminal({
+		    help: function {
+		        this.echo('compatibility - checks a file for');
+		    }
 }, {
-    greetings: 'Mac OS X online Terminal'
+    greetings: 'Welcome to file reader! Type help for commands.'
 });
 </script>
 </body>
