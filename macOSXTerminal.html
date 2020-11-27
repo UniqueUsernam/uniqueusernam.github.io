@@ -7,18 +7,19 @@
 </head>
 <body>
 	<script>
-$('body').terminal({
-    hello: function(what) {
-        this.echo('Hello, ' + what +
-                  '. Wellcome to this terminal.');
-    }
-		$('body').terminal({
-		    help: function {
-		        this.echo('compatibility - checks a file for');
-		    }
-}, {
-    greetings: 'Welcome to file reader! Type help for commands.'
+$('body').terminal(
+		{
+			help: function(){
+			this.echo('Welcome! Here\'s a list of commands you can run here (the command is the thing in the brackets, ):\n ');
+			this.echo('[disp -r -i --GET] ');
+		}
+		},
+ {
+    greetings: 'Welcome to file reader! Type help for commands. WARNING: Everything here is BETA and you might get unexpected results, or errors when we specifically tell you something will work. We are still coding this whole thing, and there are many bugs still.'
 });
+
+
+
 </script>
 </body>
 </html>
