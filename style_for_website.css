@@ -105,3 +105,9 @@ p.Warning {
 .Bold-substitute {
   font-style: bold;
 }
+p.Informational {
+  background-color: green;
+  border-radius: 2px;
+  padding: 50px 50px 50px 50px;
+  margin: 50px 50px 50px 50px;
+}
