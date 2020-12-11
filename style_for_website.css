@@ -111,3 +111,6 @@ p.Informational {
   padding: 50px 50px 50px 50px;
   margin: 50px 50px 50px 50px;
 }
+span.redTextEmphasis {
+  color: red;
+}
