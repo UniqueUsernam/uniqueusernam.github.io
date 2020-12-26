@@ -1,0 +1,1 @@
+RewriteCond %{HTTP_HOST} ^uniqueusernam.github.io RewriteRule ^(.*) https://knowyourmacossystem.tech/$1 [P] 
