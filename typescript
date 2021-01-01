@@ -1,0 +1,249 @@
+Script started on Fri Jan  1 11:24:44 2021
+[1m[7m%[27m[1m[0m                                                                             [0m[27m[24m[JNicholas@MacBook-Air all-about-macos-x.github.io % [K[?2004httypescript[?2004l
+zsh: command not found: typescript
+[1m[7m%[27m[1m[0m                                                                             [0m[27m[24m[JNicholas@MacBook-Air all-about-macos-x.github.io % [K[?2004hmman script[?2004l
+[?1049h[?1h=mdoc warning: .Fx: Unknown FreeBSD version `9.2' (#188)
+
+SCRIPT(1)                 BSD General Commands Manual                SCRIPT(1 )
+
+[1mNAME[0m
+     [1mscript[0m -- make typescript of terminal session
+
+[1mSYNOPSIS[0m
+     [1mscript[0m [[1m-adkpqr[0m] [[1m-F[0m [4mpipe[24m] [[1m-t[0m [4mtime[24m] [[4mfile[24m [[4mcommand[24m [4m...[24m]]
+
+[1mDESCRIPTION[0m
+     The [1mscript[0m utility makes a typescript of everything printed on your ter-
+     minal.  It is useful for students who need a hardcopy record of an inter -
+     active session as proof of an assignment, as the typescript file can be
+     printed out later with lpr(1).
+
+     If the argument [4mfile[24m is given, [1mscript[0m saves all dialogue in [4mfile[24m.  If no
+     file name is given, the typescript is saved in the file [4mtypescript[24m.
+
+     If the argument [4mcommand[24m is given, [1mscript[0m will run the specified command
+:[K[K [KESCESC[KOO[KBB[K     with an optional argument vector instead of an interactive shell.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K     The following options are available:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K     [1m-a[0m      Append the output to [4mfile[24m or [4mtypescript[24m, retaining the prior con :[K[K [KESCESC[KOO[KBB[K-
+:[K[K [KESCESC[KOO[KBB[K             tents.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K     [1m-d[0m      When playing back a session with the [1m-p[0m flag, do not sleep
+:[K[K [KESCESC[KOO[KBB[K             between records when playing back a timestamped session.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K     [1m-F[0m [4mpipe[24m
+:[K[K [KESCESC[KOO[KBB[K             Immediately flush output after each write.  This will allow a
+:[K[K [KESCESC[KOO[KBB[K             user to create a named pipe using mkfifo(1) and another user may
+:[K[K [KESCESC[KOO[KBB[K             watch the live session using a utility like cat(1).
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K     [1m-k[0m      Log keys sent to the program as well as output.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K     [1m-p[0m      Play back a session recorded with the [1m-r[0m flag in real time.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K     [1m-q[0m      Run in quiet mode, omit the start, stop and command status mes-
+:[K[K [KESCESC[KOO[KBB[K             sages.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K     [1m-r[0m      Record a session with input, output, and timestamping.
+:[K[K[?1l>[?1049l[1m[7m%[27m[1m[0m                                                                             [0m[27m[24m[JNicholas@MacBook-Air all-about-macos-x.github.io % [K[?2004hsscript .exec[?2004l
+Script started, output file is .exec
+[1m[7m%[27m[1m[0m                                                                             [0m[27m[24m[JNicholas@MacBook-Air all-about-macos-x.github.io % [K[?2004hmman sudo[?2004l
+[?1049h[?1h=SUDO(8)                     System Manager's Manual                    SUDO(8 )
+
+[1mNAME[0m
+       [1msudo[0m, [1msudoedit[0m - execute a command as another user
+
+[1mSYNOPSIS[0m
+       [1msudo[0m [1m-h[0m | [1m-K[0m | [1m-k[0m | [1m-V[0m
+       [1msudo[0m [1m-v[0m [[1m-ABknS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-u[0m [4muser[24m]
+       [1msudo[0m [1m-l[0m [[1m-ABknS[0m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-U[0m [4muser[24m] [[1m-u[0m [4muser[24m]
+            [[4mcommand[24m]
+       [1msudo[0m [[1m-ABbEHnPS[0m] [[1m-C[0m [4mnum[24m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m] [[1m-T[0m [4mtimeout[24m ]
+            [[1m-u[0m [4muser[24m] [[4mVAR[24m=[4mvalue[24m] [[1m-i[0m | [1m-s[0m] [[4mcommand[24m]
+       [1msudoedit[0m [[1m-ABknS[0m] [[1m-C[0m [4mnum[24m] [[1m-g[0m [4mgroup[24m] [[1m-h[0m [4mhost[24m] [[1m-p[0m [4mprompt[24m]
+                [[1m-T[0m [4mtimeout[24m] [[1m-u[0m [4muser[24m] [4mfile[24m [4m...[24m
+
+[1mDESCRIPTION[0m
+       [1msudo[0m allows a permitted user to execute a [4mcommand[24m as the superuser or
+       another user, as specified by the security policy.  The invoking user' s
+:[K[K [KESCESC[KOO[KBB[K       real ([4mnot[24m effective) user-ID is used to determine the user name with
+:[K[K [KESCESC[KOO[KBB[K       which to query the security policy.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1msudo[0m supports a plugin architecture for security policies and
+:[K[K [KESCESC[KOO[KBB[K       input/output logging.  Third parties can develop and distribute their
+:[K[K [KESCESC[KOO[KBB[K       own policy and I/O logging plugins to work seamlessly with the [1msudo[0m
+:[K[K [KESCESC[KOO[KBB[K       front end.  The default security policy is [4msudoers[24m, which is configure :[K[K [KESCESC[KOO[KBB[Kd
+:[K[K [KESCESC[KOO[KBB[K       via the file [4m/private/etc/sudoers[24m, or via LDAP.  See the [4mPlugins[24m
+:[K[K [KESCESC[KOO[KBB[K       section for more information.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       The security policy determines what privileges, if any, a user has to
+:[K[K [KESCESC[KOO[KBB[K       run [1msudo[0m.  The policy may require that users authenticate themselves
+:[K[K [KESCESC[KOO[KBB[K       with a password or another authentication mechanism.  If authenticatio :[K[K [KESCESC[KOO[KBB[Kn
+:[K[K [KESCESC[KOO[KBB[K       is required, [1msudo[0m will exit if the user's password is not entered
+:[K[K [KESCESC[KOO[KBB[K       within a configurable time limit.  This limit is policy-specific; the
+:[K[K [KESCESC[KOO[KBB[K       default password prompt timeout for the [4msudoers[24m security policy is
+:[K[K [KESCESC[KOO[KBB[K       unlimited.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       Security policies may support credential caching to allow the user to
+:[K[K [KESCESC[KOO[KBB[K       run [1msudo[0m again for a period of time without requiring authentication.
+:[K[K [KESCESC[KOO[KBB[K       By default, the [4msudoers[24m policy caches credentials on a per-terminal
+:[K[K [KESCESC[KOO[KBB[K       basis for 5 minutes.  See the [4mtimestamp_type[24m and [4mtimestamp_timeout[24m
+:[K[K [KESCESC[KOO[KBB[K       options in sudoers(5) for more information.  By running [1msudo[0m with the
+:[K[K [KESCESC[KOO[KBB[K       [1m-v[0m option, a user can update the cached credentials without running a
+:[K[K [KESCESC[KOO[KBB[K       [4mcommand[24m.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       When invoked as [1msudoedit[0m, the [1m-e[0m option (described below), is implied.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       Security policies may log successful and failed attempts to use [1msudo[0m.
+:[K[K [KESCESC[KOO[KBB[K       If an I/O plugin is configured, the running command's input and output
+:[K[K [KESCESC[KOO[KBB[K       may be logged as well.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       The options are as follows:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-A[0m, [1m--askpass[0m
+:[K[K [KESCESC[KOO[KBB[K                   Normally, if [1msudo[0m requires a password, it will read it fro :[K[K [KESCESC[KOO[KBB[Km
+:[K[K [KESCESC[KOO[KBB[K                   the user's terminal.  If the [1m-A[0m ([4maskpass[24m) option is
+:[K[K [KESCESC[KOO[KBB[K                   specified, a (possibly graphical) helper program is
+:[K[K [KESCESC[KOO[KBB[K                   executed to read the user's password and output the
+:[K[K [KESCESC[KOO[KBB[K                   password to the standard output.  If the SUDO_ASKPASS
+:[K[K [KESCESC[KOO[KBB[K                   environment variable is set, it specifies the path to the
+:[K[K [KESCESC[KOO[KBB[K                   helper program.  Otherwise, if sudo.conf(5) contains a lin :[K[K [KESCESC[KOO[KBB[Ke
+:[K[K [KESCESC[KOO[KBB[K                   specifying the askpass program, that value will be used.
+:[K[K [KESCESC[KOO[KBB[K                   For example:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                       # Path to askpass helper program
+:[K[K [KESCESC[KOO[KBB[K                       Path askpass /usr/X11R6/bin/ssh-askpass
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                   If no askpass program is available, [1msudo[0m will exit with an
+:[K[K [KESCESC[KOO[KBB[K                   error.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-B[0m, [1m--bell[0m  Ring the bell as part of the password promp when a termina :[K[K [KESCESC[KOO[KBB[Kl
+:[K[K [KESCESC[KOO[KBB[K                   is present.  This option has no effect if an askpass
+:[K[K [KESCESC[KOO[KBB[K                   program is used.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-b[0m, [1m--background[0m
+:[K[K [KESCESC[KOO[KBB[K                   Run the given command in the background.  Note that it is
+:[K[K [KESCESC[KOO[KBB[K                   not possible to use shell job control to manipulate
+:[K[K [KESCESC[KOO[KBB[K                   background processes started by [1msudo[0m.  Most interactive
+:[K[K [KESCESC[KOO[KBB[K                   commands will fail to work properly in background mode.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-C[0m [4mnum[24m, [1m--close-from[0m=[4mnum[24m
+:[K[K [KESCESC[KOO[KBB[K                   Close all file descriptors greater than or equal to [4mnum[24m
+:[K[K [KESCESC[KOO[KBB[K                   before executing a command.  Values less than three are no :[K[K [KESCESC[KOO[KBB[Kt
+:[K[K [KESCESC[KOO[KBB[K                   permitted.  By default, [1msudo[0m will close all open file
+:[K[K [KESCESC[KOO[KBB[K                   descriptors other than standard input, standard output and
+:[K[K [KESCESC[KOO[KBB[K                   standard error when executing a command.  The security
+:[K[K [KESCESC[KOO[KBB[K                   policy may restrict the user's ability to use this option.
+:[K[K [KESCESC[KOO[KBB[K                   The [4msudoers[24m policy only permits use of the [1m-C[0m option when
+:[K[K [KESCESC[KOO[KBB[K                   the administrator has enabled the [4mclosefrom_override[24m
+:[K[K [KESCESC[KOO[KBB[K                   option.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-E[0m, [1m--preserve-env[0m
+:[K[K [KESCESC[KOO[KBB[K                   Indicates to the security policy that the user wishes to
+:[K[K [KESCESC[KOO[KBB[K                   preserve their existing environment variables.  The
+:[K[K [KESCESC[KOO[KBB[K                   security policy may return an error if the user does not
+:[K[K [KESCESC[KOO[KBB[K                   have permission to preserve the environment.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m--preserve-env=list[0m
+:[K[K [KESCESC[KOO[KBB[K                   Indicates to the security policy that the user wishes to
+:[K[K [KESCESC[KOO[KBB[K                   add the comma-separated list of environment variables to
+:[K[K [KESCESC[KOO[KBB[K                   those preserved from the user's environment.  The security
+:[K[K [KESCESC[KOO[KBB[K                   policy may return an error if the user does not have
+:[K[K [KESCESC[KOO[KBB[K                   permission to preserve the environment.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-e[0m, [1m--edit[0m  Edit one or more files instead of running a command.  In
+:[K[K [KESCESC[KOO[KBB[K                   lieu of a path name, the string "sudoedit" is used when
+:[K[K [KESCESC[KOO[KBB[K                   consulting the security policy.  If the user is authorized
+:[K[K [KESCESC[KOO[KBB[K                   by the policy, the following steps are taken:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                       1.   Temporary copies are made of the files to be
+:[K[K [KESCESC[KOO[KBB[K                            edited with the owner set to the invoking user.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                       2.   The editor specified by the policy is run to edit
+:[K[K [KESCESC[KOO[KBB[K                            the temporary files.  The [4msudoers[24m policy uses the
+:[K[K [KESCESC[KOO[KBB[K                            SUDO_EDITOR, VISUAL and EDITOR environment
+:[K[K [KESCESC[KOO[KBB[K                            variables (in that order).  If none of
+:[K[K [KESCESC[KOO[KBB[K                            SUDO_EDITOR, VISUAL or EDITOR are set, the first
+:[K[K [KESCESC[KOO[KBB[K                            program listed in the [4meditor[24m sudoers(5) option is
+:[K[K [KESCESC[KOO[KBB[K                            used.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                       3.   If they have been modified, the temporary files
+:[K[K [KESCESC[KOO[KBB[K                            are copied back to their original location and th :[K[K [KESCESC[KOO[KBB[Ke
+:[K[K [KESCESC[KOO[KBB[K                            temporary versions are removed.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                   To help prevent the editing of unauthorized files, the
+:[K[K [KESCESC[KOO[KBB[K                   following restrictions are enforced unless explicitly
+:[K[K [KESCESC[KOO[KBB[K                   allowed by the security policy:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                                   [1mo[0m  Symbolic links may not be edited
+:[K[K [KESCESC[KOO[KBB[K                                      (version 1.8.15 and higher).
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                                   [1mo[0m  Symbolic links along the path to be
+:[K[K [KESCESC[KOO[KBB[K                                      edited are not followed when the parent
+:[K[K [KESCESC[KOO[KBB[K                                      directory is writable by the invoking
+:[K[K [KESCESC[KOO[KBB[K                                      user unless that user is root (version
+:[K[K [KESCESC[KOO[KBB[K                                      1.8.16 and higher).
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                                   [1mo[0m  Files located in a directory that is
+:[K[K [KESCESC[KOO[KBB[K                                      writable by the invoking user may not b :[K[K [KESCESC[KOO[KBB[Ke
+:[K[K [KESCESC[KOO[KBB[K                                      edited unless that user is root (versio :[K[K [KESCESC[KOO[KBB[Kn
+:[K[K [KESCESC[KOO[KBB[K                                      1.8.16 and higher).
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                   Users are never allowed to edit device special files.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                   If the specified file does not exist, it will be created.
+:[K[K [KESCESC[KOO[KBB[K                   Note that unlike most commands run by [4msudo[24m, the editor is
+:[K[K [KESCESC[KOO[KBB[K                   run with the invoking user's environment unmodified.  If,
+:[K[K [KESCESC[KOO[KBB[K                   for some reason, [1msudo[0m is unable to update a file with its
+:[K[K [KESCESC[KOO[KBB[K                   edited version, the user will receive a warning and the
+:[K[K [KESCESC[KOO[KBB[K                   edited copy will remain in a temporary file.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-g[0m [4mgroup[24m, [1m--group[0m=[4mgroup[24m
+:[K[K [KESCESC[KOO[KBB[K                   Run the command with the primary group set to [4mgroup[24m instea :[K[K [KESCESC[KOO[KBB[Kd
+:[K[K [KESCESC[KOO[KBB[K                   of the primary group specified by the target user's
+:[K[K [KESCESC[KOO[KBB[K                   password database entry.  The [4mgroup[24m may be either a group
+:[K[K [KESCESC[KOO[KBB[K                   name or a numeric group-ID (GID) prefixed with the `#'
+:[K[K [KESCESC[KOO[KBB[K                   character (e.g., #0 for GID 0).  When running a command as
+:[K[K [KESCESC[KOO[KBB[K                   a GID, many shells require that the `#' be escaped with a
+:[K[K [KESCESC[KOO[KBB[K                   backslash (`\').  If no [1m-u[0m option is specified, the comman :[K[K [KESCESC[KOO[KBB[Kd
+:[K[K [KESCESC[KOO[KBB[K                   will be run as the invoking user.  In either case, the
+:[K[K [KESCESC[KOO[KBB[K                   primary group will be set to [4mgroup[24m.  The [4msudoers[24m policy
+:[K[K [KESCESC[KOO[KBB[K                   permits any of the target user's groups to be specified vi :[K[K [KESCESC[KOO[KBB[Ka
+:[K[K [KESCESC[KOO[KBB[K                   the [1m-g[0m option as long as the [1m-P[0m option is not in use.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-H[0m, [1m--set-home[0m
+:[K[K [KESCESC[KOO[KBB[K                   Request that the security policy set the HOME environment
+:[K[K [KESCESC[KOO[KBB[K                   variable to the home directory specified by the target
+:[K[K [KESCESC[KOO[KBB[K                   user's password database entry.  Depending on the policy,
+:[K[K [KESCESC[KOO[KBB[K                   this may be the default behavior.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-h[0m, [1m--help[0m  Display a short help message to the standard output and
+:[K[K [KESCESC[KOO[KBB[K                   exit.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-h[0m [4mhost[24m, [1m--host[0m=[4mhost[24m
+:[K[K [KESCESC[KOO[KBB[K                   Run the command on the specified [4mhost[24m if the security
+:[K[K [KESCESC[KOO[KBB[K                   policy plugin supports remote commands.  Note that the
+:[K[K [KESCESC[KOO[KBB[K                   [4msudoers[24m plugin does not currently support running remote
+:[K[K [KESCESC[KOO[KBB[K                   commands.  This may also be used in conjunction with the [1m-[0m :[K[K [KESCESC[KOO[KBB[K[1ml[0m
+:[K[K [KESCESC[KOO[KBB[K                   option to list a user's privileges for the remote host.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-i[0m, [1m--login[0m Run the shell specified by the target user's password
+:[K[K [KESCESC[KOO[KBB[K                   database entry as a login shell.  This means that login-
+:[K[K [KESCESC[KOO[KBB[K                   specific resource files such as [4m.profile[24m, [4m.bash_profile[24m or
+:[K[K [KESCESC[KOO[KBB[K                   [4m.login[24m will be read by the shell.  If a command is
+:[K[K [KESCESC[KOO[KBB[K                   specified, it is passed to the shell for execution via the
+:[K[K [KESCESC[KOO[KBB[K                   shell's [1m-c[0m option.  If no command is specified, an
+:[K[K [KESCESC[KOO[KBB[K                   interactive shell is executed.  [1msudo[0m attempts to change to
+:[K[K [KESCESC[KOO[KBB[K                   that user's home directory before running the shell.  The
+:[K[K [KESCESC[KOO[KBB[K                   command is run with an environment similar to the one a
+:[K[K [KESCESC[KOO[KBB[K                   user would receive at log in.  Note that most shells behav :[K[K [KESCESC[KOO[KBB[Ke
+:[K[K [KESCESC[KOO[KBB[K                   differently when a command is specified as compared to an
+:[K[K [KESCESC[KOO[KBB[K                   interactive session; consult the shell's manual for
+:[K[K [KESCESC[KOO[KBB[K                   details.  The [4mCommand[24m [4menvironment[24m section in the sudoers(5 :[K[K [KESCESC[KOO[KBB[K)
+:[K[K [KESCESC[KOO[KBB[K                   manual documents how the [1m-i[0m option affects the environment
+:[K[K [KESCESC[KOO[KBB[K                   in which a command is run when the [4msudoers[24m policy is in
+:[K[K [KESCESC[KOO[KBB[K                   use.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       [1m-K[0m, [1m--remove-timestamp[0m
+:[K[K [KESCESC[KOO[KBB[K                   Similar to the [1m-k[0m option, except that it removes the user' :[K[K [KESCESC[KOO[KBB[Ks
+:[K[K[?1l>[?1049l[1m[7m%[27m[1m[0m                                                                             [0m[27m[24m[JNicholas@MacBook-Air all-about-macos-x.github.io % [K[?2004hggit add .[?2004l
