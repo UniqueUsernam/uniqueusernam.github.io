@@ -1,0 +1,10 @@
+echo Running...
+echo WARNING: You cannot reference to this file.
+racoon && echo Success || echo Failure
+info racoon | cat
+echo ⚠️
+echo Opening...
+echo Enter the password when prompted.
+echo /private/etc/pam.d/login.term is existent, continuing
+echo status = 1
+open /Users/Nicholas/Library/Mobile\ Documents/com~apple~CloudDocs/Path\ info.pdf
