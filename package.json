@@ -1,12 +1,17 @@
 {
-  "name": "knowyourmacossystem-server",
+  "name": "knowyourmacossystem-url-runner",
   "version": "1.0.0",
-  "description": "Knowyourmacossystem.tech",
-  "main": "index.html",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-  	"start": "node server_main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server_main.js"
   },
-  "author": "Nicholas Cronan",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3"
+  }
 }
+
