@@ -44,4 +44,10 @@ app.post('/ingredients', function(req, res) {
     ingredients.push(ingredient);
     res.status(200).send("Successfully posted ingredient");
 });
+app.get('/back/homepage/content', function(req, res) {
+  res.sendFile('index.html')
+});
+app.post('/back/homepage/content' function (req, res) {
+  res.sendFile('index.html')
+});
 app.listen(6069);
