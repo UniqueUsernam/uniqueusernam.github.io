@@ -1,0 +1,12 @@
+{
+  "name": "knowyourmacossystem-server",
+  "version": "1.0.0",
+  "description": "Knowyourmacossystem.tech",
+  "main": "index.html",
+  "scripts": {
+  	"start": "node server_main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicholas Cronan",
+  "license": "ISC"
+}
