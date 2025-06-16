@@ -1,0 +1,186 @@
+/* Make entire page a centered flex container */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  background-color: #f9f9f9;
+}
+
+/* Heading */
+#main-head {
+  font-size: 3em;
+  margin: 0 0 1em 0;
+  color: #333;
+  text-align: center;
+}
+
+/* Take button styling */
+#take {
+  padding: 1em 2em;
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1em;
+}
+
+#take:hover {
+  background-color: #0056b3;
+}
+
+/* Signup button top-right fixed */
+#signup {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  width: 32px;
+  height: 32px;
+  background: url('signup-icon.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* Login form container */
+#login-screen {
+  display: none;
+  padding: 1em;
+  border: 2px solid #28a745;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Inputs side-by-side */
+.login-inputs {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+#login-screen input {
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  margin-right: 1em;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+/* Submit button */
+#submit-account-access {
+  padding: 0.75em 2em;
+  font-size: 1.5em;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-account-access:hover {
+  background-color: #1e7e34;
+}
+
+/* Card display */
+/*
+#card-display {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#card-display img {
+  max-width: 80vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#cardTitle {
+  margin-top: 1em;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  max-width: 90vw;
+  word-wrap: break-word;
+}
+*/
+/* Card display */
+/* Card display */
+#card-display {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Shrink the card image area a bit */
+.card-wrapper {
+  width: 50vw;
+  height: 50vh;
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.card-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Card title styling */
+#cardTitle {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+/* Done button styling */
+#doneButton {
+  padding: 0.75em 2em;
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#doneButton:hover {
+  background-color: #0056b3;
+}
