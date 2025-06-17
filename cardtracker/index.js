@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const classField = document.getElementById('teacherClassPeriod');
   const signInCount = document.getElementById('teacherTotalSignIns');
   const teacherDone = document.getElementById('teacherDone');
-  const cards = ["Twos!", "Threes!", "Fours!", "Fives!", "Sixes!", "Sevens!", "Eights!", "Jacks!", "Kings!", "Aces!"];
+  const cards = ["Twos!", "Fives!", "Sixes!", "Sevens!", "Jacks!", "Kings!", "Aces!"];
   const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
   const hour = 3600000; // Miliseconds in an hour
   // Template for storing user data
@@ -25,16 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
     class: null
   }
   let seating = {
-    'Twos!': 5,
-    'Threes!': 5,
-    'Fours!': 5,
-    'Fives!': 5,
-    'Sixes!': 5,
-    'Sevens!': 5,
-    'Eights!': 5,
-    'Jacks!': 5,
-    'Kings!': 5,
-    'Aces!': 5
+    'Twos!': 4,
+    'Fives!': 4,
+    'Sixes!': 4,
+    'Sevens!': 4,
+    'Jacks!': 4,
+    'Kings!': 4,
+    'Aces!': 4
+  }
+  let currentPasscode = null;
+
+  // Hash passcodes to prevent leaking PINs just by reading LocalStorage, salted to add friction against brute-force
+  async function hashPIN(pin) {
+    const salt = 'classcards-Xm43E'; // Static, but blocks rainbow tables and requires knowledge of source code
+    const enc = new TextEncoder();
+    const data = enc.encode(salt + pin);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+    return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
   }
 
   function getSignIns() {
@@ -51,16 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
   localStorage.setItem('currentClassSignIns', JSON.stringify([]));
   function sit(seat) {
     if (seat === 'clear') {
-      seating['Twos!'] = 5;
-      seating['Threes!'] = 5;
-      seating['Fours!'] = 5;
-      seating['Fives!'] = 5;
-      seating['Sixes!'] = 5;
-      seating['Sevens!'] = 5;
-      seating['Eights!'] = 5;
-      seating['Jacks!'] = 5;
-      seating['Kings'] = 5;
-      seating['Aces!'] = 5;
+      seating['Twos!'] = 4;
+      seating['Fives!'] = 4;
+      seating['Sixes!'] = 4;
+      seating['Sevens!'] = 4;
+      seating['Jacks!'] = 4;
+      seating['Kings'] = 4;
+      seating['Aces!'] = 4;
       localStorage.setItem('seating', JSON.stringify(seating));
     } else {
       if (localStorage.getItem('seating')[seat] <= 0) {
@@ -129,12 +133,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  submitButton.addEventListener('click', () => {
+  submitButton.addEventListener('click', async () => {
     if (mode === 'signup') {
       if (name.value && passcode.value) {
         if (localStorage.getItem(name.value) === null || name.value === 'seating' || name.value === 'currentClassSignIns') {
           if (prompt("Please retype your passcode to confirm") === passcode.value) {
-            userData.passcode = passcode.value;
+            userData.passcode = await hashPIN(passcode.value);
             userData.lastTaken = null;
             userData.class = classPeriod.value;
             localStorage.setItem(name.value, JSON.stringify(userData));
@@ -160,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Please enter your name and passcode!');
       }
     } else { // Login
-      if (localStorage.getItem(name.value) !== null && passcode.value === JSON.parse(localStorage.getItem(name.value)).passcode) {
+      if (localStorage.getItem(name.value) !== null && (await hashPIN(passcode.value)) === JSON.parse(localStorage.getItem(name.value)).passcode) {
         let loadedData = JSON.parse(localStorage.getItem(name.value), (key, value) => {
           if (typeof value === 'string' && value.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/)) {
             return new Date(value);
@@ -174,16 +178,16 @@ document.addEventListener('DOMContentLoaded', () => {
             setSignIns('empty', null); // Reset sign-in list
             sit('clear'); // Reset seating
           }
-          setSignIns('push', name.value + " - " + now.toLocaleTimeString('en-US', {
-            hour: 'numeric',
-            minute: 'numeric',
-            hour12: true
-          }));
           // Show card
           let cardName = getRandomElement(cards);
           while (sit(cardName) === false) {
             cardName = getRandomElement(cards);
           }
+          setSignIns('push', name.value + " - " + now.toLocaleTimeString('en-US', {
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true
+          }) + ' - ' + cardName.slice(0,-1));
           cardTitle.innerHTML = cardName;
           card.src = "cards/"+cardName.toLowerCase().slice(0,-2)+".png";
           card.alt = cardName;
@@ -230,13 +234,16 @@ document.addEventListener('DOMContentLoaded', () => {
               setSignIns('empty', null); // Reset sign-in list
               sit('clear'); // Reset seating
             }
-            setSignIns('push', ame.value + " - " + now.toLocaleTimeString('en-US', {
+            // Show card
+            let cardName = getRandomElement(cards);
+            while (sit(cardName) === false) {
+              cardName = getRandomElement(cards);
+            }
+            setSignIns('push', name.value + " - " + now.toLocaleTimeString('en-US', {
               hour: 'numeric',
               minute: 'numeric',
               hour12: true
-            }));
-            // Show card
-            let cardName = getRandomElement(cards);
+            }) + ' - ' + cardName.slice(0,-1));
             cardTitle.innerHTML = cardName;
             card.src = "cards/"+cardName.toLowerCase().slice(0,-2)+".png";
             card.alt = cardName;
