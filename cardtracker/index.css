@@ -49,6 +49,20 @@ body {
   z-index: 100;
 }
 
+/* Teacher button top-right fixed */
+#teacher {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  width: 32px;
+  height: 32px;
+  background: url('teacher.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
 /* Login form container */
 #login-screen {
   display: none;
@@ -93,39 +107,6 @@ body {
   background-color: #1e7e34;
 }
 
-/* Card display */
-/*
-#card-display {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-#card-display img {
-  max-width: 80vw;
-  max-height: 90vh;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-#cardTitle {
-  margin-top: 1em;
-  font-size: 2em;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  max-width: 90vw;
-  word-wrap: break-word;
-}
-*/
-/* Card display */
 /* Card display */
 #card-display {
   position: fixed;
@@ -182,5 +163,79 @@ body {
 }
 
 #doneButton:hover {
+  background-color: #0056b3;
+}
+
+#login-screen input[type="number"] {
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  margin-right: 1em;
+  width: 200px;
+  box-sizing: border-box;
+  margin-top: 0.2em;
+  margin-left: 5em;
+}
+
+/* Teacher View container */
+#teacherView {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2em;
+  box-sizing: border-box;
+  z-index: 1000;
+  overflow-y: auto;
+  text-align: center;
+}
+
+#teacherView h1 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+.teacher-info p {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+  color: #555;
+}
+
+#teacherList {
+  list-style-type: none;
+  padding: 0;
+  margin: 2em 0;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+#teacherList li {
+  padding: 0.75em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.1em;
+}
+
+/* Done button (same style as existing one) */
+#teacherDone {
+  padding: 0.75em 2em;
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#teacherDone:hover {
   background-color: #0056b3;
 }

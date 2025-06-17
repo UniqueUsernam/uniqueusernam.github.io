@@ -8,6 +8,7 @@
 </head>
 <body>
   <button id="signup" title="Sign Up"></button>
+  <button id="teacher" title="Teacher Access"></button>
 
   <h1 id="main-head">Class Cards</h1>
   <button id="take">Take</button>
@@ -16,6 +17,7 @@
     <div id="login-form" class="login-inputs">
       <input id="name" placeholder="Name" type="text" required />
       <input id="passcode" placeholder="Lunch PIN" type="password" required />
+      <input id="class" placeholder="Class Period" type="number" min="1" max="8" style="display:none;" required />
     </div>
     <button id="submit-account-access">Submit</button>
   </div>
@@ -28,6 +30,16 @@
     <button id="doneButton">Done!</button>
   </div>
 
-
+  <div id="teacherView">
+    <h1>Teacher View</h1>
+    <div class="teacher-info">
+      <p>Class: <span id="teacherClassPeriod"></span></p>
+      <p><span id="teacherTotalSignIns">0</span> Total Sign-ins</p>
+    </div>
+    <ul id="teacherList">
+      <!-- Dynamically populated list of signed-in students -->
+    </ul>
+    <button id="teacherDone">Done</button>
+  </div>
 </body>
 </html>
